@@ -1,5 +1,5 @@
 # AzuraPuzzles
-Тестовое задание Unity Developer lkz AzuraGames
+Тестовое задание Unity Developer для AzuraGames
 
 Разработайте прототип мини игры для мобильных устройств в механике Puzzle.
 Сеттинг- любой, на примитивах.
