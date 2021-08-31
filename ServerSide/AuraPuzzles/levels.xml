@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<levels amount="10" >
+<level name="Бабочки" pieces="6" />
+<level name="Домик" pieces="7" />
+<level name="Речка" pieces="6"/>
+<level name="Горы" />
+<level name="Лес" />
+<level name="Восход" />
+</levels>

@@ -15,11 +15,11 @@ D:/AuraPuzzle/Auragames_Puzzzle
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60005
+65228
 Successfully changed project path to: D:/AuraPuzzle/Auragames_Puzzzle
 D:/AuraPuzzle/Auragames_Puzzzle
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 29.67 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 29.64 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.16f1 (049d6eca3c44)
 [Subsystems] Discovering subsystems at path C:/Unity/2020.3.16f1/Editor/Data/Resources/UnitySubsystems
@@ -35,89 +35,89 @@ Initialize mono
 Mono path[0] = 'C:/Unity/2020.3.16f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Unity/2020.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Unity/2020.3.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56540
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56516
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Unity/2020.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002482 seconds.
+Registered in 0.002351 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 28.83 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 27.80 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.420 seconds
+- Completed reload, in  2.304 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2420ms)
-		BeginReloadAssembly (62ms)
+	ReloadAssembly (2304ms)
+		BeginReloadAssembly (58ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (455ms)
-			LoadAssemblies (59ms)
+		EndReloadAssembly (438ms)
+			LoadAssemblies (55ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (158ms)
+			SetupTypeCache (151ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (40ms)
-			SetupLoadedEditorAssemblies (175ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (168ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (29ms)
-				BeforeProcessingInitializeOnLoad (19ms)
-				ProcessInitializeOnLoadAttributes (91ms)
-				ProcessInitializeOnLoadMethodAttributes (32ms)
+				RefreshPlugins (28ms)
+				BeforeProcessingInitializeOnLoad (18ms)
+				ProcessInitializeOnLoadAttributes (87ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002966 seconds.
+Registered in 0.002942 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.207 seconds
+- Completed reload, in  1.175 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1208ms)
-		BeginReloadAssembly (159ms)
+	ReloadAssembly (1176ms)
+		BeginReloadAssembly (161ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (22ms)
-		EndReloadAssembly (978ms)
-			LoadAssemblies (91ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (946ms)
+			LoadAssemblies (93ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (283ms)
+			SetupTypeCache (276ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (55ms)
-			SetupLoadedEditorAssemblies (447ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (426ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (87ms)
-				ProcessInitializeOnLoadAttributes (339ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (318ms)
 				ProcessInitializeOnLoadMethodAttributes (5ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1407 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 65.1 MB.
 System memory in use after: 65.2 MB.
 
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1841.
-Total: 3.134800 ms (FindLiveObjects: 0.161100 ms CreateObjectMapping: 0.031100 ms MarkObjects: 2.874600 ms  DeleteObjects: 0.066700 ms)
+Total: 3.433200 ms (FindLiveObjects: 0.161200 ms CreateObjectMapping: 0.032500 ms MarkObjects: 3.154700 ms  DeleteObjects: 0.083200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -129,4 +129,58 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Sounds/slide.sfk
+  artifactKey: Guid(dc27827d1ee3e3a4b9fb3580408cfb20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/slide.sfk using Guid(dc27827d1ee3e3a4b9fb3580408cfb20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.581494 seconds  code(4) message(Build asset version error: assets/sounds/slide.sfk in SourceAssetDB has modification time of '2021-08-31T11:13:05.0526681Z' while content on disk has modification time of '0001-01-01T00:00:00Z' with error code 2
+Stacktrace:
+0x00007ff70ef40fbc (Unity) StackWalker::GetCurrentCallstack
+0x00007ff70ef49399 (Unity) StackWalker::ShowCallstack
+0x00007ff710464f8c (Unity) GetStacktrace
+0x00007ff710647d37 (Unity) GetAssetHashAndValidate
+0x00007ff710642f03 (Unity) AssetVersionBuilder::BuildHashOfSourceAssetArray
+0x00007ff710640e72 (Unity) AssetVersionBuilder::BuildAssetVersion
+0x00007ff71061b2dd (Unity) CreateAssetVersionBuilder
+0x00007ff710621fdd (Unity) ImportToObjects
+0x00007ff710620df8 (Unity) ImportAsset
+0x00007ff710582c68 (Unity) AssetImportWorker::Import
+0x00007ff7105d679a (Unity) <lambda_dc1c196658351a6563374f191278d712>::operator()
+0x00007ff71067a222 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff71067c380 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff71067fb0e (Unity) asio::io_service::run
+0x00007ff710602d4b (Unity) RunAssetImportWorkerClientV2
+0x00007ff710602da0 (Unity) RunAssetImporterV2
+0x00007ff70facb1c6 (Unity) Application::InitializeProject
+0x00007ff7104724f2 (Unity) WinMain
+0x00007ff7122c34b6 (Unity) __scrt_common_main_seh
+0x00007ff8e4727034 (KERNEL32) BaseThreadInitThunk
+0x00007ff8e5102651 (ntdll) RtlUserThreadStart
+)
+  ERROR: Build asset version error: assets/sounds/slide.sfk in SourceAssetDB has modification time of '2021-08-31T11:13:05.0526681Z' while content on disk has modification time of '0001-01-01T00:00:00Z' with error code 2
+Stacktrace:
+0x00007ff70ef40fbc (Unity) StackWalker::GetCurrentCallstack
+0x00007ff70ef49399 (Unity) StackWalker::ShowCallstack
+0x00007ff710464f8c (Unity) GetStacktrace
+0x00007ff710647d37 (Unity) GetAssetHashAndValidate
+0x00007ff710642f03 (Unity) AssetVersionBuilder::BuildHashOfSourceAssetArray
+0x00007ff710640e72 (Unity) AssetVersionBuilder::BuildAssetVersion
+0x00007ff71061b2dd (Unity) CreateAssetVersionBuilder
+0x00007ff710621fdd (Unity) ImportToObjects
+0x00007ff710620df8 (Unity) ImportAsset
+0x00007ff710582c68 (Unity) AssetImportWorker::Import
+0x00007ff7105d679a (Unity) <lambda_dc1c196658351a6563374f191278d712>::operator()
+0x00007ff71067a222 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff71067c380 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff71067fb0e (Unity) asio::io_service::run
+0x00007ff710602d4b (Unity) RunAssetImportWorkerClientV2
+0x00007ff710602da0 (Unity) RunAssetImporterV2
+0x00007ff70facb1c6 (Unity) Application::InitializeProject
+0x00007ff7104724f2 (Unity) WinMain
+0x00007ff7122c34b6 (Unity) __scrt_common_main_seh
+0x00007ff8e4727034 (KERNEL32) BaseThreadInitThunk
+0x00007ff8e5102651 (ntdll) RtlUserThreadStart
+
+  Import took 0.583551 seconds .
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
