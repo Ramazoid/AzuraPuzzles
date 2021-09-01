@@ -1,9 +1,12 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Zenject;
 
 public class Drag : MonoBehaviour, IPointerDownHandler
 {
+   
+
     private Vector3 startmouse;
     public Vector3 startpos;
     public bool drag;
@@ -11,7 +14,8 @@ public class Drag : MonoBehaviour, IPointerDownHandler
     internal Action<Drag> goal;
     internal Action<Drag> dragStarted;
 
-  
+   [Inject]
+    public Sounds player= new Sounds();
 
     void Update()
     {
@@ -25,17 +29,17 @@ public class Drag : MonoBehaviour, IPointerDownHandler
         if (Input.GetMouseButtonUp(0))
         {
             float dist = Vector3.Distance(NormalPos, transform.localPosition);
-            print("Distance=" + dist);
+            //print("Distance=" + dist);
             
 
             if (drag)
             {
-                print($"<piece x=\"" + transform.localPosition.x + "\" y=\"" + transform.localPosition.y + "\" />");
+                //print($"<piece x=\"" + transform.localPosition.x + "\" y=\"" + transform.localPosition.y + "\" />");
 
                 if (dist <= 10f)
                 {
                     transform.localPosition = NormalPos;
-                    Sounds.Play("pop");
+                    player.Play("pop");
                     goal(this);
                     
                 }

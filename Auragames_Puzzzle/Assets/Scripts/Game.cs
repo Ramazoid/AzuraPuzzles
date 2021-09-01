@@ -1,33 +1,37 @@
 using UnityEngine;
+using Zenject;
 
 public class Game : MonoBehaviour
 {
-    private TweenManager TWenMan;
+    [Inject]
+    public Sounds player;
+
+    private TweenManager TWeenMan;
     private Level Level;
     private Scroller scroller;
     public int currentLevel;
 
     void Start()
     {
-      
-        TWenMan = GetComponent<TweenManager>();
+
+        TWeenMan = GetComponent<TweenManager>();
         Level = GetComponent<Level>();
         scroller = GetComponent<Scroller>();
-        TWenMan.Show("WelcomeText",()=>
+        TWeenMan.Show("WelcomeText",()=>
         {
-            TWenMan.Show("Logo",()=> {
-                TWenMan.Show("PlayButton", null);
+            TWeenMan.Show("Logo",()=> {
+                TWeenMan.Show("PlayButton", null);
             });
         });
     }
 
     public void HideWelcomeAndStart()
     {
-        Sounds.Play("pop");
-        TWenMan.Hide("WelcomeText", () =>
+        player.Play("pop");
+        TWeenMan.Hide("WelcomeText", () =>
         {
-            TWenMan.Hide("Logo", () => {
-                TWenMan.Hide("PlayButton", ()=> {
+            TWeenMan.Hide("Logo", () => {
+                TWeenMan.Hide("PlayButton", ()=> {
                     GetComponent<Loader>().LoadLevels();
                 });
             });
@@ -35,21 +39,21 @@ public class Game : MonoBehaviour
     }
     public void InitLevel(Thumb t)
     {
-        if (t.locked) return;
+        if(scroller.wasSlided) return;
         scroller.GoOff();
         Level.LoadLevel(t);
-        Sounds.Play("pop");
+        player.Play("pop");
 
     }
     public void BackButton()
     {
-        Sounds.Play("pop");
+        player.Play("pop");
         Level.SaveAndHideLevel();
         scroller.GoOn();
     }
     public void RepeatButton()
     {
-        Sounds.Play("pop");
+        player.Play("pop");
         print("repeat");
         Level.RepeatLevel();
     }

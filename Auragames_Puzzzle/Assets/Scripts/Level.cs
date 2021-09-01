@@ -4,9 +4,13 @@ using System.IO;
 using System.Xml;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class Level : MonoBehaviour
 {
+    [Inject]
+    public Sounds player;
+
     public Image GameField;
     public GameObject piecesShop;
     private Loader Loader;
@@ -47,7 +51,7 @@ public class Level : MonoBehaviour
         RepeatButton.SetActive(false);
 
 
-        Loader.LoadTexture("http://ramazoid.ru/AuraPuzzles/Level" + levelNumber + "/image.jpg", (Texture2D t) =>
+        Loader.LoadTexture("AuraPuzzles/Level" + levelNumber + "/image.jpg", (Texture2D t) =>
          {
              GameField.sprite = Sprite.Create(t, new Rect(0, 0, t.width, t.height), Vector2.zero);
              levelImage = GameField.sprite;
@@ -82,6 +86,7 @@ public class Level : MonoBehaviour
     internal void SaveAndHideLevel()
     {
         GameField.gameObject.SetActive(false);
+        GetComponent<Loader>().LoadLevels();
     }
 
     void GoalCount(Drag d)
@@ -92,7 +97,7 @@ public class Level : MonoBehaviour
         print("Goaled=" + goaledPieces.Count);
         if (goaledPieces.Count == piecesNumber)
         {
-            Sounds.Play("win");
+            player.Play("win");
             foreach (Drag dd in Drags) dd.gameObject.SetActive(false);
             GameField.sprite = winTexture;
             scroller.UnlockLevel(levelNumber + 1);
@@ -103,7 +108,7 @@ public class Level : MonoBehaviour
     }
     private void LoadPieces()
     {
-        Loader.LoadXML("http://ramazoid.ru/AuraPuzzles/level" + levelNumber + "/pieces.xml", (string xmlstring) =>
+        Loader.LoadXML("AuraPuzzles/level" + levelNumber + "/pieces.xml", (string xmlstring) =>
         {
             using (XmlReader reader = XmlReader.Create(new StringReader(xmlstring)))
             {
@@ -135,7 +140,7 @@ public class Level : MonoBehaviour
     private void AddPieceToShop(int pieñeNumber, Vector3 pos)
     {
 
-        Loader.LoadTexture("http://ramazoid.ru/AuraPuzzles/level" + levelNumber + "/piece" + pieñeNumber + ".png", (Texture2D t) =>
+        Loader.LoadTexture("AuraPuzzles/level" + levelNumber + "/piece" + pieñeNumber + ".png", (Texture2D t) =>
         {
             GameObject g = new GameObject(); g.name = "Piece_" + pieñeNumber;
 

@@ -2,9 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class TweenManager : MonoBehaviour
 {
+    [Inject]
+    public Sounds player;
+
     private Tweener[] Tweeners;
     private Dictionary<string, Tweener> TweenerDic = new Dictionary<string, Tweener>();
 
@@ -34,7 +38,7 @@ public class TweenManager : MonoBehaviour
 
     public void Show(string tname, Action cb)
     {
-        Sounds.Play("slide");
+        player.Play("slide");
         Tweener t = GetTweenerByName(tname);
         t.GoOn(cb);
      

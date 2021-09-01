@@ -8,10 +8,11 @@ using UnityEngine.Networking;
 
 public class Loader : MonoBehaviour
 {
+    const string HOST = "http://localhost:8000/";
     private Scroller scroller;
     private TweenManager TWenMan;
     public GameObject LoadingIcon;
-    private Dictionary<int, string> levelNames = new Dictionary<int, string>();
+    
     private Dictionary<int, string> levelPieces = new Dictionary<int, string>();
 
    
@@ -31,11 +32,12 @@ public class Loader : MonoBehaviour
     IEnumerator LoadImageTexture(string url, Action<Texture2D> callback)
     {
         
-        WWW www = new WWW(url);
+        WWW www = new WWW(HOST+url);
         yield return www;
         if (callback != null)
             callback(www.texture);
         LoadingIcon.SetActive(false);
+        www.Dispose();www = null;
 
     }
     IEnumerator GetRequest(string uri, Action<string> callback)
@@ -66,14 +68,14 @@ public class Loader : MonoBehaviour
 
     internal void LoadXML(string url, Action<string> callback)
     {
-        
-        StartCoroutine(GetRequest(url, callback));
+
+        StartCoroutine(GetRequest(HOST + url, callback));
     }
 
     internal void LoadLevels()
     {
         LoadingIcon.SetActive(true);
-        StartCoroutine(GetRequest("http://ramazoid.ru/AuraPuzzles/levels.xml",GetLevels));
+        StartCoroutine(GetRequest(HOST+"AuraPuzzles/levels.xml", GetLevels));
     }
 
     private void GetLevels(string text)
@@ -82,13 +84,13 @@ public class Loader : MonoBehaviour
         {
             reader.MoveToContent();
             int levelcounter = 0;
+            levelPieces = new Dictionary<int, string>();
             while (reader.Read())
             {
                 if (!String.IsNullOrEmpty(reader.Name) && reader.Name == "level")
                 {
 
-                    levelNames.Add(++levelcounter, reader.GetAttribute("name"));
-                    levelPieces.Add(levelcounter, reader.GetAttribute("pieces"));
+                    levelPieces.Add(++levelcounter, reader.GetAttribute("pieces"));
                     LoadThumbnail(levelcounter);
                 }
 
@@ -100,14 +102,14 @@ public class Loader : MonoBehaviour
     }
     private void LoadThumbnail(int levelnumber)
     {
-        string url= "http://ramazoid.ru/AuraPuzzles/Level"+levelnumber+"/thumb.jpg";
+        string url= HOST+"AuraPuzzles/Level"+levelnumber+"/thumb.jpg";
        StartCoroutine(LoadImage(url, levelnumber));
     } 
     IEnumerator LoadImage(string url,int levelnumber)
     {
         WWW www = new WWW(url);
         yield return www;
-        scroller.AddLevel(www.texture,levelNames[levelnumber],levelPieces[levelnumber],  levelnumber);
+        scroller.AddLevel(www.texture,levelPieces[levelnumber],  levelnumber);
 
     }
 }

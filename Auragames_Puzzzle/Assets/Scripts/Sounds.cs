@@ -17,7 +17,7 @@ public class Sounds : MonoBehaviour
     }
     
     
-    internal static void Play(string clipName)
+    public void Play(string clipName)
     {
         INST.Player.Stop();
         INST.Player.clip = GetClipByName(clipName);
@@ -31,6 +31,5 @@ public class Sounds : MonoBehaviour
             if (c.name == clipName)
                 return c;
         throw new Exception($"Audioclip [{clipName}] not found!!");
-        return null;
     }
 }
