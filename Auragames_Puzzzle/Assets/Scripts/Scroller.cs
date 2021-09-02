@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -58,6 +59,15 @@ public class Scroller : MonoBehaviour
         
     }
 
+    internal void ClearThumbs()
+    {
+        foreach (KeyValuePair<int, Thumb> th in Thumbs)
+        {
+            th.Value.DisposeTexture();
+        }
+            Thumbs = new Dictionary<int, Thumb>();
+    }
+
     internal void AddLevel(Texture2D texture,  string pieces, int levelNumber)
     {
 
@@ -79,7 +89,8 @@ public class Scroller : MonoBehaviour
         g.SetThumb(texture,levelPrefs);
         g.levelNumber = levelNumber;
         
-        Thumb t = g.GetComponent<Thumb>(); 
+        Thumb t = g.GetComponent<Thumb>();
+        print("addLevelNumber=" + levelNumber);
         Thumbs.Add(levelNumber, t);
         LayoutRebuilder.ForceRebuildLayoutImmediate(scroller.GetComponent<RectTransform>());
 
@@ -97,8 +108,11 @@ public class Scroller : MonoBehaviour
     {
         player.Play("slide");
         Tweener t = scroller.GetComponent<Tweener>();
-        t.movingOff = true;
-        t.GoOn(null);
+        print("-----------------movingOff=true");
+        //t.movingOff = true;
+        print("-----------------goOn");
+
+        //t.GoOn(null);
     }
 
     internal void UnlockLevel(int levelNumber)

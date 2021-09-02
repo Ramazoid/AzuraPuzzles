@@ -39,17 +39,22 @@ public class Game : MonoBehaviour
     }
     public void InitLevel(Thumb t)
     {
-        if(scroller.wasSlided) return;
-        scroller.GoOff();
+        scroller.scroller.gameObject.SetActive(false);
+        if (scroller.wasSlided) return;
+        //scroller.GoOff();
+        scroller.ClearThumbs();
         Level.LoadLevel(t);
         player.Play("pop");
+        
 
     }
     public void BackButton()
     {
+       
         player.Play("pop");
         Level.SaveAndHideLevel();
         scroller.GoOn();
+        scroller.scroller.gameObject.SetActive(true);
     }
     public void RepeatButton()
     {

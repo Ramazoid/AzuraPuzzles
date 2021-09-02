@@ -32,4 +32,9 @@ public class Sounds : MonoBehaviour
                 return c;
         throw new Exception($"Audioclip [{clipName}] not found!!");
     }
+
+    internal static void sPlay(string clipName)
+    {
+        INST.Play(clipName);
+    }
 }

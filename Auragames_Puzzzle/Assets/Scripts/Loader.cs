@@ -8,7 +8,7 @@ using UnityEngine.Networking;
 
 public class Loader : MonoBehaviour
 {
-    const string HOST = "http://localhost:8000/";
+    const string HOST = "http://ramazoid.ru/";
     private Scroller scroller;
     private TweenManager TWenMan;
     public GameObject LoadingIcon;
@@ -60,7 +60,11 @@ public class Loader : MonoBehaviour
                     Debug.LogError(pages[page] + ": HTTP Error: " + webRequest.error);
                     break;
                 case UnityWebRequest.Result.Success:
-                    callback(webRequest.downloadHandler.text);
+                    if (callback != null)
+                    {
+                        callback(webRequest.downloadHandler.text);
+                        callback = null;
+                    }
                     break;
             }
         }
@@ -91,13 +95,14 @@ public class Loader : MonoBehaviour
                 {
 
                     levelPieces.Add(++levelcounter, reader.GetAttribute("pieces"));
+                    //print(reader.GetAttribute("name"));
                     LoadThumbnail(levelcounter);
                 }
 
                 LoadingIcon.SetActive(false);
-                TWenMan.Show("LevelScroller", null);
+               
             }
-
+            TWenMan.Show("LevelScroller", null);
         }
     }
     private void LoadThumbnail(int levelnumber)
@@ -109,6 +114,7 @@ public class Loader : MonoBehaviour
     {
         WWW www = new WWW(url);
         yield return www;
+        //print("loaded " + url);
         scroller.AddLevel(www.texture,levelPieces[levelnumber],  levelnumber);
 
     }

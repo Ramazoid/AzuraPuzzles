@@ -32,12 +32,14 @@ public class TweenManager : MonoBehaviour
 
     internal void Hide(string tname, Action cb)
     {
+        print("hide "+tname);
         Tweener t = GetTweenerByName(tname);
         t.GoOff(cb);
     }
 
     public void Show(string tname, Action cb)
     {
+        print("show " + tname);
         player.Play("slide");
         Tweener t = GetTweenerByName(tname);
         t.GoOn(cb);

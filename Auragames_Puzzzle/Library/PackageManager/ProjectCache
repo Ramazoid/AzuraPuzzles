@@ -5,21 +5,72 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637656473949534730
-    m_Hash: 1057299360
+      ticks: 637660905720845348
+    m_Hash: 3055438420
   m_LockFileStatus:
     m_FilePath: D:/AuraPuzzle/Auragames_Puzzzle/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637656474105822238
-    m_Hash: 1016591461
+      ticks: 637661689821290796
+    m_Hash: 1310147337
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
+    - packageId: com.unity.2d.sprite@1.0.0
+      testable: 0
+      isDirectDependency: 1
+      version: 1.0.0
+      source: 2
+      resolvedPath: D:\AuraPuzzle\Auragames_Puzzzle\Library\PackageCache\com.unity.2d.sprite@1.0.0
+      assetPath: Packages/com.unity.2d.sprite
+      name: com.unity.2d.sprite
+      displayName: 2D Sprite
+      author:
+        name: 
+        email: 
+        url: 
+      category: 2D
+      type: 
+      description: Use Unity Sprite Editor Window to create and edit Sprite asset
+        properties like pivot, borders and Physics shape
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0
+        compatible:
+        - 1.0.0
+        verified: 1.0.0
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - 2d
+      - sprite
+      - sprite editor window
+      registry:
+        id: 
+        name: 
+        url: 
+        scopes: []
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 0
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.collab-proxy@1.7.1
       testable: 0
       isDirectDependency: 1
@@ -64,6 +115,8 @@ m_PackageAssets:
         - 1.5.7
         - 1.6.0
         - 1.7.1
+        - 1.8.0
+        - 1.9.0
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -76,6 +129,8 @@ m_PackageAssets:
         - 2.1.0-preview.6
         compatible:
         - 1.7.1
+        - 1.8.0
+        - 1.9.0
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -354,6 +409,7 @@ m_PackageAssets:
         - 1.2.1
         - 1.2.2
         - 1.2.3
+        - 1.2.4
         compatible:
         - 1.0.2
         - 1.0.3
@@ -366,7 +422,8 @@ m_PackageAssets:
         - 1.2.1
         - 1.2.2
         - 1.2.3
-        verified: 1.2.3
+        - 1.2.4
+        verified: 1.2.4
       dependencies: []
       resolvedDependencies: []
       keywords: []
@@ -440,9 +497,11 @@ m_PackageAssets:
         - 1.1.24
         - 1.1.26
         - 1.1.27
+        - 1.1.29
         compatible:
         - 1.1.27
-        verified: 1.1.27
+        - 1.1.29
+        verified: 1.1.29
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.6
@@ -558,6 +617,7 @@ m_PackageAssets:
         - 1.5.4
         - 1.5.5
         - 1.5.6
+        - 1.6.0-preview.1
         - 2.0.0
         - 2.0.1-preview.1
         - 2.0.1
@@ -579,6 +639,7 @@ m_PackageAssets:
         - 2.1.4
         - 2.1.5
         - 2.1.6
+        - 2.2.0-preview.1
         - 3.0.0-preview.1
         - 3.0.0-preview.3
         - 3.0.0-preview.4
@@ -596,8 +657,10 @@ m_PackageAssets:
         - 3.0.4
         - 3.0.5
         - 3.0.6
+        - 3.2.0-pre.1
         compatible:
         - 3.0.6
+        - 3.2.0-pre.1
         verified: 3.0.6
       dependencies:
       - name: com.unity.ugui

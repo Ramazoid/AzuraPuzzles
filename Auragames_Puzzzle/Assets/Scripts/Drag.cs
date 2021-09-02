@@ -13,9 +13,13 @@ public class Drag : MonoBehaviour, IPointerDownHandler
     public  Vector3 NormalPos;
     internal Action<Drag> goal;
     internal Action<Drag> dragStarted;
+    internal int origWidth;
+    internal int origHeight;
+    internal float scaleX;
+    internal float scaleY;
 
-   [Inject]
-    public Sounds player= new Sounds();
+    //[Inject]
+    //public Sounds player= new Sounds();
 
     void Update()
     {
@@ -28,18 +32,26 @@ public class Drag : MonoBehaviour, IPointerDownHandler
         }
         if (Input.GetMouseButtonUp(0))
         {
-            float dist = Vector3.Distance(NormalPos, transform.localPosition);
+            
             //print("Distance=" + dist);
             
 
             if (drag)
             {
-                //print($"<piece x=\"" + transform.localPosition.x + "\" y=\"" + transform.localPosition.y + "\" />");
+                RectTransform rt = GetComponent<RectTransform>();
 
-                if (dist <= 10f)
+                Vector3 checkVector = new Vector3(rt.anchoredPosition.x / scaleX, rt.anchoredPosition.y / scaleY, 0);
+                    
+            float dist = Vector3.Distance(NormalPos, checkVector);
+
+                print("Normalpos="+NormalPos);
+                print("anchored  <piece x=\"" + rt.anchoredPosition.x/scaleX+ "\" y=\""+ rt.anchoredPosition.y / scaleY+"\" />");
+                print($"distance={dist}");
+
+                if (dist <= 50f)
                 {
-                    transform.localPosition = NormalPos;
-                    player.Play("pop");
+                    rt.anchoredPosition=new Vector3(NormalPos.x * scaleX, NormalPos.y * scaleY, 0);
+                    Sounds.sPlay("pop");
                     goal(this);
                     
                 }
